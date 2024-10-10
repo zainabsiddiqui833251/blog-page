@@ -1,101 +1,96 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="w-[100%] min-h-screen overflow-auto bg-[#1A1A1D] p-4">
+      <h1 className="text-center text-[5vw] font-bold font-serif text-[#F0E68C]">BEST BLOGS</h1>
+      <div className="parentDiv flex justify-center gap-5 items-center flex-wrap mt-8">
+        <div className='blog_card transform hover:scale-105 transition-transform duration-300 w-[330px] bg-[#333333] border-solid border-[#FFD700] border-[2px] rounded-xl p-4'>
+          <div className="imageContainer mb-4">
+            <Image src='/images/paris.jpeg' alt='paris' width={600} height={600} className="rounded-md w-[100%] h-[150px]" />
+          </div>
+          <div className="title uppercase mb-2">
+            <h1 className="text-xl font-bold text-[#F0E68C]">paris , france</h1>
+          </div>
+          <div className="description mb-4">
+            <p className="text-gray-300">Known as the "City of Love," Paris offers iconic landmarks like the Eiffel Tower, world-class art at the Louvre, and exquisite cuisine, making it a romantic and cultural hub.</p>
+          </div>
+          <div className="button">
+            <button className="bg-[#FF4500] text-white py-2 px-4 rounded-lg"><Link href='/blog_1'>Read More</Link></button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className='blog_card transform hover:scale-105 transition-transform duration-300 w-[330px] bg-[#333333] border-solid border-[#FFD700] border-[2px] rounded-xl p-4'>
+          <div className="imageContainer mb-4">
+            <Image src='/images/rome.jpeg' alt='rome' width={600} height={600} className="rounded-md w-[100%] h-[150px]" />
+          </div>
+          <div className="title uppercase mb-2">
+            <h1 className="text-xl font-bold text-[#F0E68C]">rome , italy</h1>
+          </div>
+          <div className="description mb-4">
+            <p className="text-gray-300">With ancient marvels like the Colosseum and Vatican City, Rome is a living museum where history, art, and Italian culture blend to create a timeless travel experience.</p>
+          </div>
+          <div className="button">
+            <button className="bg-[#FF4500] text-white py-2 px-4 rounded-lg"><Link href='/blog_2'>Read More</Link></button>
+          </div>
+        </div>
+        <div className='blog_card transform hover:scale-105 transition-transform duration-300 w-[330px] bg-[#333333] border-solid border-[#FFD700] border-[2px] rounded-xl p-4'>
+          <div className="imageContainer mb-4">
+            <Image src='/images/bali.jpeg' alt='bali' width={600} height={600} className="rounded-md w-[100%] h-[150px]" />
+          </div>
+          <div className="title uppercase mb-2">
+            <h1 className="text-xl font-bold text-[#F0E68C]">bali , indonesia</h1>
+          </div>
+          <div className="description mb-4">
+            <p className="text-gray-300">Bali’s stunning landscapes, from rice terraces to pristine beaches, along with its vibrant culture and spiritual retreats, make it a paradise for adventure and relaxation.</p>
+          </div>
+          <div className="button">
+            <button className="bg-[#FF4500] text-white py-2 px-4 rounded-lg"><Link href='/blog_3'>Read More</Link></button>
+          </div>
+        </div>
+        <div className='blog_card transform hover:scale-105 transition-transform duration-300 w-[330px] bg-[#333333] border-solid border-[#FFD700] border-[2px] rounded-xl p-4'>
+          <div className="imageContainer mb-4">
+            <Image src='/images/newyork.jpeg' alt='newyork' width={600} height={600} className="rounded-md w-[100%] h-[150px]" />
+          </div>
+          <div className="title uppercase mb-2">
+            <h1 className="text-xl font-bold text-[#F0E68C]">newyork city , usa</h1>
+          </div>
+          <div className="description mb-4">
+            <p className="text-gray-300">The energy of New York is unmatched, with landmarks like Times Square, Central Park, and the Statue of Liberty defining this iconic metropolis known for its culture, shopping, and theater.</p>
+          </div>
+          <div className="button">
+            <button className="bg-[#FF4500] text-white py-2 px-4 rounded-lg"><Link href='/blog_4'>Read More</Link></button>
+          </div>
+        </div>
+        <div className='blog_card transform hover:scale-105 transition-transform duration-300 w-[330px] bg-[#333333] border-solid border-[#FFD700] border-[2px] rounded-xl p-4'>
+          <div className="imageContainer mb-4">
+            <Image src='/images/kyoto.jpeg' alt='kyoto' width={600} height={600} className="rounded-md w-[100%] h-[150px]" />
+          </div>
+          <div className="title uppercase mb-2">
+            <h1 className="text-xl font-bold text-[#F0E68C]">kyoto , japan</h1>
+          </div>
+          <div className="description mb-4">
+            <p className="text-gray-300">Kyoto captures the essence of traditional Japan with its ancient temples, tranquil gardens, and seasonal beauty, offering a peaceful escape steeped in history and spirituality.</p>
+          </div>
+          <div className="button">
+            <button className="bg-[#FF4500] text-white py-2 px-4 rounded-lg"><Link href='/blog_5'>Read More</Link></button>
+          </div>
+        </div>
+        <div className='blog_card transform hover:scale-105 transition-transform duration-300 w-[330px] bg-[#333333] border-solid border-[#FFD700] border-[2px] rounded-xl p-4'>
+          <div className="imageContainer mb-4">
+            <Image src='/images/capetown.jpeg' alt='capetown' width={600} height={600} className="rounded-md w-[100%] h-[150px]" />
+          </div>
+          <div className="title uppercase mb-2">
+            <h1 className="text-xl font-bold text-[#F0E68C]">cape town,southafrica</h1>
+          </div>
+          <div className="description mb-4">
+            <p className="text-gray-300">Cape Town dazzles with its stunning natural beauty, from Table Mountain to beaches, along with its rich cultural heritage and vibrant atmosphere, perfect for nature and history enthusiasts.</p>
+          </div>
+          <div className="button">
+            <button className="bg-[#FF4500] text-white py-2 px-4 rounded-lg"><Link href='/blog_6'>Read More</Link></button>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }

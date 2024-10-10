@@ -2,26 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+nav ul li{
+    position: relative;
+}
+nav ul li .link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color:#ff7043;
+    transition: width 0.3s ease,left 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+nav ul li .link:hover::after{
+    width: 100%;
+    left: 0;
+}
+.blog_card:hover{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 48px 100px 0px;
+}
+/* Global CSS styles */
+
+.sidebar-open {
+    transform: translateX(0);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.sidebar-closed {
+    transform: translateX(100%);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+@media screen and (max-width: 700px) {
+    .blog_card{
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 550px)  {
+    .blog_card{
+        width: 350px;
+    }
+    .parentDiv{
+        width: 90%;
+    }
+}
+
+/* Ensure this part is in your CSS file */
+.dropdown-content {
+    position: absolute; /* Keep it absolutely positioned */
+    left: 0; /* Align to the left */
+    top: 100%; /* Place it below the dropdown */
+    background-color: #1a1a1a; /* Keep your background color */
+    color: #f0f0f0;
+    border: 1px solid #ff7043;
+    padding: 4px;
+    z-index: 50; /* Make sure it sits above other elements */
+    display: none; /* Start hidden */
+}
+
+/* Display the dropdown when hovering */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show on hover */
 }
